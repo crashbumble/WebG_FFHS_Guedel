@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="feedback_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="main_script.js"></script>
+    <script src="form_ajax.js"></script>
+    <script src="form_check.js"></script>
+    <title>WebG 2018</title>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md bg-primary navbar-light">
+        <a class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
+        <div id="placeholder"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="pizza.html">Pizza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="salad.html">Salad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="softdrinks.html">Soft&nbsp;Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+<div class="flex-container">
+    <form onchange="statusForm()">
+        <h1>Tell us what you think</h1>
+
+        <div class="row">
+            <p class="col" style="text-align: right;">How do you like our Pizza?</p>
+
+            <div class="col">
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="pizzaRating" value="awesome">awesome
+                    </label>
+                </div>
+
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="pizzaRating" value="good">good
+                    </label>
+                </div>
+
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="pizzaRating" value="okay">okay
+                    </label>
+                </div>
+
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="pizzaRating" value="poor">poor
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="col" style="text-align: right;">What do you think about our prizes?</p>
+
+            <div class="col">
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="prizeRating" value="fair">awesome
+                    </label>
+                </div>
+    
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="prizeRating" value="okay">good
+                    </label>
+                </div>
+
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="prizeRating" value="expensive">okay
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="col" style="text-align: right;">Your name?</p>
+            <div class="col"><input type="text" class="form-control" name="User"></div>
+        </div>
+
+        <div class="row">
+            <p class="col" style="text-align: right;">Your e-mail address?</p>
+            <div class="col"><input type="text" class="form-control" name="Mail" onchange="setEmail()">
+            <div class="infoFail" id="errorMail"></div></div>
+        </div>
+
+        <div class="row">
+            <p class="col" style="text-align: right;">What can we do better?</p>
+            <div class="col">
+                <textarea class="form-control" rows="5" name="Text" onchange="setText()"></textarea>
+                <div class="infoFail" id="errorText"></div>
+            </div>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: 0%"></div>
+        </div>
+        <button type="button" class="btn btn-primary" id="send_button" value="Send" onclick="sendFeedback()">
+        Send</button>
+    </form>
+
+    <table class="table" id="result">
+        <tr><th colspan="3" style="text-align: center; font-size: 1.5em;">Customer Feedback Statistic</th></tr>
+        <tr>
+            <th rowspan="4">Pizza Rating:</th>
+            <td class="pizza">awesome</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="pizza">good</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="pizza">okay</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="pizza">poor</td>
+            <td>0</td>
+        </tr>
+        <tr><td colspan="3"></td></tr>
+        <tr>
+            <th rowspan="3">Prize Rating:</th>
+            <td class="prize">fair</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="prize">okay</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td class="prize">expensive</td>
+            <td>0</td>
+        </tr>
+    </table>
+</div>
+</main>
+
+<footer>
+<div class="row bg-secondary" id="sticky">
+    <p class="col">
+    Hours:<br>
+    Mon-Thu: 11a.m. - 23p.m.<br>
+    Fri-Sat: 11a.m. - 24p.m.<br>
+    Sunday closed</p>
+    
+    <p class="col" id="mid">
+    <i>"The Pizzeria is on place I have been<br>
+    waiting to visit for a long time.<br>
+    The reason being their Rustica pizza which<br>
+    absolutely blew me away."</i> - Jimmy</p>
+    
+    <div class="col"><p id="right">
+    Addresss:<br>
+    Tony's Pizza Factory<br>
+    2122 N Clark St<br>
+    Chicago, IL 60614, USA</p></div>
+</div>
+</footer>
+
+</body>
+</html>

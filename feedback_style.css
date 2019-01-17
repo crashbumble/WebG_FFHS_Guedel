@@ -1,0 +1,30 @@
+#result {
+    display: none;
+    margin-top: 7%;
+}
+
+#send_button {
+    display: none;
+    float: right;
+    margin: 15px;
+}
+
+.flex-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.flex-container h1 {
+    text-align: center;
+    color: #006491;
+    margin: 7% 0px 15px 0px;
+}
+
+.progress {
+    margin: 5% 50px;
+}
+
+.infoFail {
+    color: red;
+    font-size: 0.8em;
+}

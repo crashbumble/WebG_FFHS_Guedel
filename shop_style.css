@@ -1,0 +1,61 @@
+main {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.flex-container {   
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    margin: 7%;
+}
+
+.flex-container h1 {
+    text-align: center;
+    color: #006491;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.shop-box {
+    width: 250px;
+    margin: 10px;
+}
+
+.shop-box p {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.shop-main {
+    width: 100%;
+}
+
+.shop-main select {
+    float: left;
+    width: 150px;
+    margin-top: 5px;
+}
+
+.shop-main img {
+    float: right;
+    margin-top: 5px;
+}
+
+.type {
+    float: left;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.price {
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.ingredients {
+    float: left;
+    font-size: 0.8em;
+}

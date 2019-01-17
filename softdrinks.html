@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="shop_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="order_ajax.js"></script>
+    <script src="main_script.js"></script>
+    <script src="softdrinks_ajax.js"></script>
+    <title>WebG 2018</title>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md bg-primary navbar-light">
+        <a class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
+        <div id="placeholder"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="pizza.html">Pizza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="salad.html">Salad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="softdrinks.html">Soft&nbsp;Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+<div class="flex-container">
+    <h1>Choose your Drink</h1>
+    
+    <div class="shop-box">
+        <div style="height: 250px; width: 250px; overflow: hidden;"><img class="ajaxImg" alt="Drink_1"></div>
+        <p class="type">Coca Cola</p>
+        <div class="shop-main">
+            <img src="icon_cart.png" alt="Icon" height="25" width="25" onclick="order('Coca Cola', 'softdrink', '1')">
+            <span class="price">2$</span>
+            <select id="softdrinkselection1">
+                <option value="50cl">50cl</option>
+                <option value="33cl">33cl</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="shop-box">
+        <div style="height: 250px; width: 250px; overflow: hidden;"><img class="ajaxImg" alt="Drink_2"></div>
+        <p class="type">Fanta</p>
+        <div class="shop-main">
+            <img src="icon_cart.png" alt="Icon" height="25" width="25" onclick="order('Fanta', 'softdrink', '2')">
+            <span class="price">2$</span>
+            <select id="softdrinkselection2">
+                <option value="50cl">50cl</option>
+                <option value="33cl">33cl</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="shop-box">
+        <div style="height: 250px; width: 250px; overflow: hidden;"><img class="ajaxImg" alt="Drink_3"></div>
+        <p class="type">Pepsi</p>
+        <div class="shop-main">
+            <img src="icon_cart.png" alt="Icon" height="25" width="25" onclick="order('Pepsi', 'softdrink', '3')">
+            <span class="price">2$</span>
+            <select id="softdrinkselection3">
+                <option value="50cl">50cl</option>
+                <option value="33cl">33cl</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="shop-box">
+        <div style="height: 250px; width: 250px; overflow: hidden;"><img class="ajaxImg" alt="Drink_4"></div>
+        <p class="type">Red Bull</p>
+        <div class="shop-main">
+            <img src="icon_cart.png" alt="Icon" height="25" width="25" onclick="order('Red Bull', 'softdrink', '4')">
+            <span class="price">3$</span>
+            <select id="softdrinkselection4">
+                <option value="50cl">50cl</option>
+                <option value="33cl">33cl</option>
+            </select>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer>
+<div class="row bg-secondary" id="sticky">
+    <p class="col">
+    Hours:<br>
+    Mon-Thu: 11a.m. - 23p.m.<br>
+    Fri-Sat: 11a.m. - 24p.m.<br>
+    Sunday closed</p>
+    
+    <p class="col" id="mid">
+    <i>"The Pizzeria is on place I have been<br>
+    waiting to visit for a long time.<br>
+    The reason being their Rustica pizza which<br>
+    absolutely blew me away."</i> - Jimmy</p>
+    
+    <div class="col"><p id="right">
+    Addresss:<br>
+    Tony's Pizza Factory<br>
+    2122 N Clark St<br>
+    Chicago, IL 60614, USA</p></div>
+</div>
+</footer>
+
+</body>
+</html>

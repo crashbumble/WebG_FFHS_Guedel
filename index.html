@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="index_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="main_script.js"></script>
+    <title>WebG 2018</title>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md bg-primary navbar-light">
+        <a class="navbar-brand" href="index.html">Tony's Pizza Factory</a>
+        <div id="placeholder"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="pizza.html">Pizza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="salad.html">Salad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="softdrinks.html">Soft&nbsp;Drinks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main>
+<div class="flex-container">
+    <h1>Welcome to Tony's Pizza Factory</h1>
+    <img id="singleImg" src="restaurant.png" alt="Restaurant Impressions">
+    
+    <div class="image-title">
+        <img src="sample_pizza.png" alt="Sample Pizza">
+        <a href="pizza.html" class="btn btn-info" role="button">Pizza</a>
+    </div>
+
+    <div class="image-title">
+        <img src="sample_salad.png" alt="Sample Salad">
+        <a href="salad.html" class="btn btn-info" role="button">Salad</a>
+    </div>
+
+    <div class="image-title">
+        <img src="sample_drinks.png" alt="Sample Drinks">
+        <a href="softdrinks.html" class="btn btn-info" role="button">Soft Drinks</a>
+    </div>    
+</div>
+</main>
+
+<footer>
+<div class="row bg-secondary" id="sticky">
+    <p class="col">
+    Hours:<br>
+    Mon-Thu: 11a.m. - 23p.m.<br>
+    Fri-Sat: 11a.m. - 24p.m.<br>
+    Sunday closed</p>
+    
+    <p class="col" id="mid">
+    <i>"The Pizzeria is on place I have been<br>
+    waiting to visit for a long time.<br>
+    The reason being their Rustica pizza which<br>
+    absolutely blew me away."</i> - Jimmy</p>
+    
+    <div class="col"><p id="right">
+    Addresss:<br>
+    Tony's Pizza Factory<br>
+    2122 N Clark St<br>
+    Chicago, IL 60614, USA</p></div>
+</div>
+</footer>
+
+</body>
+</html>
